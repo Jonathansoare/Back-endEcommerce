@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT || 3001; 
-const host = process.env.HOST || "192.168.0.7";
+const port = process.env.PORT; 
+const host = process.env.HOST;
 
 const userRouter = require("./src/routes/UserRouter")
 const productsRouter = require("./src/routes/ProductsRouter")
