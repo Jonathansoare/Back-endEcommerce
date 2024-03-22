@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "vercel-build": "npm run babel src -d dist",
     "build": "babel src -d dist"
   },
   "author": "",
