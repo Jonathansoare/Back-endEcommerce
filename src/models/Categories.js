@@ -25,8 +25,8 @@ const Categories = sequelize.define('categories', {
 });
 Categories.sync() 
 
-//Categories.belongsTo(Products, { foreignKey: 'type' });
-//Products.hasMany(Categories, { foreignKey: 'type' });
+Categories.belongsTo(Products, { foreignKey: 'type' });
+Products.hasMany(Categories, { foreignKey: 'type' });
 
 
 module.exports = Categories;
