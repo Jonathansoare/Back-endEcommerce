@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT; 
+const port = process.env.PORT || 3001; 
 const host = process.env.HOST;
 
 const userRouter = require("./src/routes/UserRouter")
