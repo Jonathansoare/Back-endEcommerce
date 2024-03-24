@@ -37,4 +37,4 @@ app.use(Favorite);
 /* controla as rotas de cupons */
 app.use(cuponRouter);
 
-app.listen(port,host, () => console.log(`Servidor rodando...`))
+app.listen(port, () => console.log(`Servidor rodando...`))
