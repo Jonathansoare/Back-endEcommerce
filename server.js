@@ -41,4 +41,8 @@ app.use("/",(req,res) => {
     res.send("hello word.")
 })
 
-app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
+const server = app.listen(port, () => {
+    const host = server.address().address;
+    const port = server.address().port;
+    console.log(`Aplicação rodando em http://${host}:${port}`);
+  });
