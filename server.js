@@ -42,7 +42,13 @@ app.use("/",(req,res) => {
 })
 
 const server = app.listen(port, () => {
-    const host = server.address().address;
-    const port = server.address().port;
+    const address = server.address();
+    let host;
+    if (address.family === 'IPv6') {
+      host = `[${address.address}]`; // Coloque IPv6 entre colchetes
+    } else {
+      host = address.address;
+    }
+    const port = address.port;
     console.log(`Aplicação rodando em http://${host}:${port}`);
   });
