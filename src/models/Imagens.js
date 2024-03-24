@@ -18,9 +18,9 @@ const Imagens = sequelize.define('imagens', {
         allowNull: true
     }
 });
-
+Imagens.sync()
 Imagens.belongsTo(Products, { foreignKey: 'productId' });
 Products.hasMany(Imagens, { foreignKey: 'productId' })
-Imagens.sync()
+
 
 module.exports = Imagens;
