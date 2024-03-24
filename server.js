@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT || 3001; 
+const PORT = process.env.PORT || 3001; 
 const host = process.env.HOST;
 
 const userRouter = require("./src/routes/UserRouter")
@@ -41,14 +41,9 @@ app.use("/",(req,res) => {
     res.send("hello word.")
 })
 
-const server = app.listen(port, () => {
+const server = app.listen(PORT, () => {
     const address = server.address();
-    let host;
-    if (address.family === 'IPv6') {
-      host = `[${address.address}]`; // Coloque IPv6 entre colchetes
-    } else {
-      host = address.address;
-    }
+    const host = address.address === '::' ? 'localhost' : address.address;
     const port = address.port;
     console.log(`Aplicação rodando em http://${host}:${port}`);
   });
