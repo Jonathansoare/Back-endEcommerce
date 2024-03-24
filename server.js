@@ -37,4 +37,8 @@ app.use(Favorite);
 /* controla as rotas de cupons */
 app.use(cuponRouter);
 
+app.use("/",(req,res) => {
+    res.send("hello word.")
+})
+
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
