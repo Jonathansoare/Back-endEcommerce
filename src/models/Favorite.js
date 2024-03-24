@@ -18,7 +18,7 @@ const Favorite = sequelize.define('Favorite', {
   }
 });
 
-Favorite.belongsTo(Product, { foreignKey: 'productId' }); // Estabelece a relação belongsTo com o modelo Product
 Favorite.sync();
+Favorite.belongsTo(Product, { foreignKey: 'productId' }); // Estabelece a relação belongsTo com o modelo Product
 
 module.exports = Favorite;
