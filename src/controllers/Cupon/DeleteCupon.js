@@ -5,7 +5,6 @@ const DeleteCupon = async (req,res) => {
     try {
         const id = req.params
         
-
         await Cupons.destroy({
             where:{
                 id:id.id
