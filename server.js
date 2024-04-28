@@ -4,6 +4,13 @@ const cors = require('cors');
 const PORT = process.env.PORT || 3001; 
 const host = process.env.HOST;
 
+// Carrega automaticamente o arquivo de ambiente correto com base no ambiente
+if (process.env.NODE_ENV === 'production') {
+    require('dotenv').config({ path: '.env.production' });
+} else {
+    require('dotenv').config({ path: '.env.local' });
+}
+
 const userRouter = require("./src/routes/UserRouter")
 const productsRouter = require("./src/routes/ProductsRouter")
 const brandRouter = require("./src/routes/BrandRouter")
