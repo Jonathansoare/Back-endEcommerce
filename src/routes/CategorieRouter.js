@@ -7,7 +7,7 @@ const {DeleteCategorie} = require("../controllers/Categorie/DeleteCategories")
 const {getCategorie} = require("../controllers/Categorie/GetCategories")
 const {eAdmin} = require('../middlewares/Auth');
 
-router.post('/registerCategorie',eAdmin,RegisterCategorie)
+router.post('/registerCategorie',RegisterCategorie)
 router.put('/editCategorie/:id',eAdmin,EditCategorie)
 router.delete('/deleteCategorie/:id',eAdmin,DeleteCategorie)
 router.get('/getCategorie',getCategorie)
