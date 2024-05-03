@@ -11,6 +11,7 @@ router.post('/registerBrand',eAdmin,RegisterBrand)
 router.put('/editBrand/:id',eAdmin,EditBrands)
 router.delete('/deleteBrand/:id',eAdmin,DeleteBrand)
 router.get('/getBrand',getBrand)
+router.get('/getBrand/:id',getBrand)
 
 const brandRouter = router
 
