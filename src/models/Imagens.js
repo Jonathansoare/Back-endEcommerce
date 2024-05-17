@@ -14,7 +14,7 @@ const Imagens = sequelize.define('imagens', {
         allowNull: false
     },
     imageUrl: {
-        type: DataTypes.STRING(7000),
+        type: DataTypes.STRING((11000)),
         allowNull: true
     }
 });

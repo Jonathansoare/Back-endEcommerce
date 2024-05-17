@@ -21,7 +21,7 @@ const Products = sequelize.define('products',{
         allowNull: false
     },
     description:{
-        type:DataTypes.STRING,
+        type:DataTypes.STRING((11000)),
         allowNull:false
     },
     quantityInStock:{
