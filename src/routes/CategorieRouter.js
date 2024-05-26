@@ -11,6 +11,7 @@ router.post('/registerCategorie',RegisterCategorie)
 router.put('/editCategorie/:id',eAdmin,EditCategorie)
 router.delete('/deleteCategorie/:id',eAdmin,DeleteCategorie)
 router.get('/getCategorie',getCategorie)
+router.get('/getCategorie/:id',getCategorie)
 
 const categorieRouter = router
 
