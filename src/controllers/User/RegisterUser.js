@@ -1,12 +1,12 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const Usuario = require('../../models/User');
+const User = require('../../models/User');
 
 async function cadastrar(req, res) {
   const { name, email, password,role,dateOfBirth} = req.body;
 
   // Verifique se o email já está cadastrado
-  const usuarioExistente = await Usuario.findOne({ where: { email } });
+  const usuarioExistente = await User.findOne({ where: { email } });
   if (usuarioExistente) {
     return res.status(401).json({ error: 'Email já cadastrado.' });
   }
@@ -15,7 +15,7 @@ async function cadastrar(req, res) {
   const hashSenha = await bcrypt.hash(password, 8);
 
   try {
-    const novoUsuario = await Usuario.create({
+    const novoUsuario = await User.create({
       name,
       email,
       dateOfBirth:dateOfBirth || null,
