@@ -53,7 +53,7 @@ app.use(LogsRouter);
 app.use(PedidoRouter);
 
 app.use("/",(req,res) => {
-    res.send("hello word.")
+    res.send("Router invalid")
 })
 
 const server = app.listen(PORT, () => {
