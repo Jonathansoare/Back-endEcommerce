@@ -12,9 +12,10 @@ var _require4 = require("../controllers/Categorie/GetCategories"),
   getCategorie = _require4.getCategorie;
 var _require5 = require('../middlewares/Auth'),
   eAdmin = _require5.eAdmin;
-router.post('/registerCategorie', eAdmin, RegisterCategorie);
+router.post('/registerCategorie', RegisterCategorie);
 router.put('/editCategorie/:id', eAdmin, EditCategorie);
 router["delete"]('/deleteCategorie/:id', eAdmin, DeleteCategorie);
 router.get('/getCategorie', getCategorie);
+router.get('/getCategorie/:id', getCategorie);
 var categorieRouter = router;
 module.exports = categorieRouter;

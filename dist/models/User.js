@@ -36,7 +36,7 @@ var User = sequelize.define('User', {
     allowNull: true
   },
   role: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   }
 });

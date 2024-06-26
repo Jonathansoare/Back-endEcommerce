@@ -16,15 +16,15 @@ var Imagens = sequelize.define('imagens', {
     allowNull: false
   },
   imageUrl: {
-    type: DataTypes.STRING(7000),
+    type: DataTypes.STRING(11000),
     allowNull: true
   }
 });
+Imagens.sync();
 Imagens.belongsTo(Products, {
   foreignKey: 'productId'
 });
 Products.hasMany(Imagens, {
   foreignKey: 'productId'
 });
-Imagens.sync();
 module.exports = Imagens;
