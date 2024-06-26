@@ -19,6 +19,7 @@ const ShoppingCart = require("./src/routes/ShoppingCart")
 const Favorite = require("./src/routes/FavoriteRouter")
 const cuponRouter = require("./src/routes/CuponRouter")
 const LogsRouter = require("./src/routes/LogRouter")
+const PedidoRouter = require("./src/routes/PedidoRouter")
 
 app.use(express.json());
 app.use(cors());
@@ -47,6 +48,9 @@ app.use(cuponRouter);
 
 /* controla as rotas de Logs */
 app.use(LogsRouter);
+
+/* controla as rotas de pedidos */
+app.use(PedidoRouter);
 
 app.use("/",(req,res) => {
     res.send("hello word.")
